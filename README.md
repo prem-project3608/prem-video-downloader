@@ -206,6 +206,34 @@ threads(url).then(data => {
   console.log(data) 
 });
 ```
+
+## Usage Spotify Search 
+```js
+(async () => {
+  const { spotifySearch } = require("nayan-videos-downloader");
+
+  try {
+    let URL = await spotifySearch("ghum odd", 5);
+    console.log(URL);
+  } catch (error) {
+    console.error("Error fetching Spotify search results:", error);
+  }
+})();
+```
+## Usage Spotify Download 
+```js
+(async () => {
+  const { spotifyDl } = require("nayan-videos-downloader");
+
+  try {
+    const url = "https://open.spotify.com/track/18xxOCfmxqBD5YgTFpzp5d"
+    let URL = await spotifyDl(url);
+    console.log(URL);
+  } catch (error) {
+    console.error("Error fetching Spotify search results:", error);
+  }
+})();
+```
 ## Usage All Media Down
 ```bash
 support url: facebook, tiktok, twitter, instagram, youtube, pinterest, gdrive, capcut, likee, threads
