@@ -14,7 +14,9 @@ module.exports = {
   pintarest: createRequest('pintarest'),
   capcut: createRequest('capcut'),
   likee: createRequest('likee'),
-  alldown: createRequest('alldown')
+  alldown: createRequest('alldown'),
+  spotifySearch: createRequest('spotify-search', (name, limit) => ({ name, limit })),
+  spotifyDl: createRequest('spotifyDl', (url) => ({ url }))
 };
 
 function createRequest(endpoint, formatData) {
