@@ -3,20 +3,20 @@ const axios = require('axios');
 const apiBaseUrl = 'https://nayan-video-downloader.vercel.app/';
 
 module.exports = {
-  ndown: createRequest('ndown'),
-  instagram: createRequest('instagram'),
-  tikdown: createRequest('tikdown'),
-  ytdown: createRequest('ytdown'),
-  threads: createRequest('threads'),
-  twitterdown: createRequest('twitterdown'),
-  fbdown2: createRequest('fbdown2', (url, key) => ({ url, key })),
-  GDLink: createRequest('GDLink'),
-  pintarest: createRequest('pintarest'),
-  capcut: createRequest('capcut'),
-  likee: createRequest('likee'),
-  alldown: createRequest('alldown'),
-  spotifySearch: createRequest('spotify-search', (name, limit) => ({ name, limit })),
-  spotifyDl: createRequest('spotifyDl', (url) => ({ url }))
+  prem_ndown: createRequest('prem_ndown'),
+  prem_instagram: createRequest('prem_instagram'),
+  prem_tikdown: createRequest('prem_tikdown'),
+  prem_ytdown: createRequest('prem_ytdown'),
+  prem_threads: createRequest('prem_threads'),
+  prem_twitterdown: createRequest('prem_twitterdown'),
+  prem_fbdown2: createRequest('prem_fbdown2', (url, key) => ({ url, key })),
+  prem_GDLink: createRequest('prem_GDLink'),
+  prem_pintarest: createRequest('prem_pintarest'),
+  prem_capcut: createRequest('prem_capcut'),
+  prem_likee: createRequest('prem_likee'),
+  prem_alldown: createRequest('prem_alldown'),
+  prem_spotifySearch: createRequest('prem_spotify-search', (name, limit) => ({ name, limit })),
+  prem_spotifyDl: createRequest('prem_spotifyDl', (url) => ({ url }))
 };
 
 function createRequest(endpoint, formatData) {
@@ -28,7 +28,7 @@ function createRequest(endpoint, formatData) {
         resolve(response.data);
       } catch (error) {
         resolve({
-          developer: 'MOHAMMAD NAYAN',
+          developer: 'PREM BABU',
           status: false,
           msg: `${capitalize(endpoint.replace(/^\w/, c => c.toUpperCase()))} API error`,
         });
